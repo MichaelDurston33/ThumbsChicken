@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nuts__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does this ingredient trigger a nut allergy?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this ingredient trigger a nut allergy?</inlineHelpText>
+    <label>Nuts</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

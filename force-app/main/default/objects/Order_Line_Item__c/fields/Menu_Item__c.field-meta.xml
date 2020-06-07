@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Menu_Item__c</fullName>
+    <description>Menu Items for the Order.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Menu Items for the Order.</inlineHelpText>
+    <label>Menu Item</label>
+    <referenceTo>Menu_Item__c</referenceTo>
+    <relationshipLabel>Order Line Items</relationshipLabel>
+    <relationshipName>Order_Line_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
