@@ -1,13 +1,13 @@
-@AuraEnabled
 public with sharing class createOrderRecords {
-    public createOrderRecords() {
+    @AuraEnabled(cacheable=true)
+    public static integer createOrderRecords() {
         try {
             order__c O = new Order__c();
             insert O;
-            system.debug('200');
+            return 200;
             
         } catch (DMLException e) {
-            system.debug('400');
+            return 400;
             
         }
         
