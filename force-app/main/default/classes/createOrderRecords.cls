@@ -1,5 +1,5 @@
 public with sharing class createOrderRecords {
-    @AuraEnabled(cacheable=true)
+    @AuraEnabled(cacheable=false)
     public static integer createOrderRecords() {
         try {
             order__c O = new Order__c();
