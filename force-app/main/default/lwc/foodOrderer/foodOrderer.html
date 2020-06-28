@@ -1,0 +1,25 @@
+<template>
+    <!-- Display results if available. -->
+    <template if:true={results}>
+        <div class="menu slds-grid slds-gutters">
+            <div class="slds-col slds-size_2-of-3">Menu Item</div>
+            <div class="QTY slds-col slds-size_1-of-3">QTY</div>
+        </div>
+        <template for:each={results} for:item="result">
+            <c-food-orderer-row 
+                key={result.Id}
+                menu-item-id={result.Id}
+                menu-item-name={result.Name} 
+                menu-item-price={result.Price_to_Customer__c}
+                onamountchanged={handleAmountChange}
+                >
+            </c-food-orderer-row>
+        </template>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_2-of-3">
+                <button onclick={handleSubmit} class="submit-order">Submit Order</button>
+            </div>
+            <div class="total slds-col slds-size_1-of-3">{priceToPay}</div>
+        </div>
+    </template>
+</template>

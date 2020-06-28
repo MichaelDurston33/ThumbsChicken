@@ -1,0 +1,29 @@
+.menu {
+    font-size: 19px;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.QTY {
+    margin-left: 15px;
+}
+
+.total {
+    font-size: 35px;
+    margin-left: -15px;
+}
+
+.total:before {
+    content: 'RM ';
+}
+
+.submit-order {
+    color: white;
+    border: none;
+    background-color:  #77966D;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    margin-top: 6px;
+    margin-left: -11px
+}
