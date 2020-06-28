@@ -8,6 +8,7 @@ export default class FoodOrdererRow extends LightningElement {
     amount = 0
 
     changeAmount(event) {
+        //Adding a comment
         switch(event.target.dataset.operator) {
             case "subtract":
                 this.amount > 0 ? this.amount -= 1 : null;
