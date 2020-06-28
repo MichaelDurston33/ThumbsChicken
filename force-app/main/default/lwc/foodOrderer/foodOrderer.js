@@ -1,10 +1,12 @@
 import { LightningElement, wire, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'
+import Id from '@salesforce/user/Id';
 import Menuitems from '@salesforce/apex/foodOrderer2.Menuitems';
 import createOrderRecords from '@salesforce/apex/createOrderRecords.createOrderRecords';
 
 export default class FoodOrderer extends LightningElement {
     
+    userId = Id
     order;
     error;
     data;
@@ -77,7 +79,7 @@ export default class FoodOrderer extends LightningElement {
 
     handleSubmit() {
         if (this.validateEligableSubmit()) {
-            createOrderRecords().then(result => {
+            createOrderRecords({selectedMenuItems: this.orderIds, currentUserId: this.userId}).then(result => {
                 if (result === 200) {
                     const event = new ShowToastEvent({
                         title: 'Order Submitted!',
