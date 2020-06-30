@@ -4,9 +4,10 @@ public with sharing class createOrderRecords {
         try {
             System.debug(selectedMenuItems);
             System.debug(currentUserId);
+            string newID = '' order__c.Id;
             order__c O = new Order__c();
             O.ownerId = currentUserId;
-            
+            o.Name = newID;
             insert O;
             return 200;
             
