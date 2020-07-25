@@ -1,7 +1,6 @@
 public with sharing class createOrderRecords {
     @AuraEnabled(cacheable=false)
-    public static integer createOrderRecords(List<Id> selectedMenuItems, Id currentUserId) {
-        
+    public static integer createOrderRecords(List<Id> selectedMenuItems, Id currentUserId) {        
                 System.debug(selectedMenuItems);
                 System.debug(currentUserId);
                 order__c O = new Order__c();
@@ -28,6 +27,3 @@ public with sharing class createOrderRecords {
         return 300;
     }
 }
-
-
-

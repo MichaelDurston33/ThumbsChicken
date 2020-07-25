@@ -1,0 +1,26 @@
+<template>
+    <div class="food-orderer-row slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-3">
+            <h1>{menuItemName}</h1>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <div class="slds-grid slds-gutters">
+                <div class="subtract">
+                    <lightning-icon 
+                        data-operator="subtract" 
+                        onclick={changeAmount} 
+                        size="x-small" 
+                        icon-name="utility:dash"></lightning-icon>
+                </div>
+                <div class="row-amount">{amount}</div>
+                <div class="add" >
+                    <lightning-icon 
+                        data-operator="add" 
+                        onclick={changeAmount} 
+                        size="x-small" 
+                        icon-name="utility:add"></lightning-icon>
+                </div>
+            </div>   
+        </div>
+    </div>
+</template>
